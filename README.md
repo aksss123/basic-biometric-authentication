@@ -4,7 +4,7 @@ Program that authenticates users with facial and voice recognition using Amazon 
 
 The program uses the OpenCV and face_recognition libraries for facial recognition on the local machine. The voice recognition work is done using AWS S3, Lambda, and Transcribe.
 
-![Project AWS Usage](https://imgur.com/B0rfqvR)
+![Project AWS Usage](diagram.png)
 
 A voice recording is recorded on the local computer and then uploaded to the S3 bucket in the cloud. This triggers the Lambda function to automatically take the audio file and send it to Amazon Transcribe. Transcribe extracts the speech from the audio and sends the transcription JSON file back to the S3 bucket. The transcription is then pulled from the S3 bucket to the local computer to check whether it is the correct password.
 
