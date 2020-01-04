@@ -2,17 +2,17 @@
 
 Program that authenticates users with facial and voice recognition using Amazon Web Services' on demand cloud computing platform. Made to learn to use Amazon Web Services and its machine learning services, storage services, and serverless code execution.
 
-The program uses the OpenCV and face_recognition libraries for facial recognition on the local machine. The voice recognition work is done using AWS S3, Lambda, and Transcribe.
+The program uses the OpenCV and face_recognition libraries for facial recognition. The voice recognition work is done using AWS S3, Lambda, and Transcribe.
 
 ![Project AWS Usage](diagram.png)
 
-A voice recording is recorded on the local computer and then uploaded to the S3 bucket in the cloud. This triggers the Lambda function to automatically take the audio file and send it to Amazon Transcribe. Transcribe extracts the speech from the audio and sends the transcription JSON file back to the S3 bucket. The transcription is then pulled from the S3 bucket to the local computer to check whether it is the correct password.
+A voice recording is recorded by the program and then automatically uploaded to the S3 bucket in the cloud. This triggers the Lambda function to automatically take the audio file and send it to Amazon Transcribe. Transcribe extracts the speech from the audio and sends the transcription JSON file back to the S3 bucket. The transcription is then pulled from the S3 bucket to the program to check whether it is the correct password.
 
 The password is hashed and stored in a binary file in lieu of a database for simplicity sake and because it isn't the main focus of the project. 
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for testing purposes.
+These instructions will get you a copy of the project up and running on your machine for testing purposes.
 
 ### Setup
 
@@ -51,3 +51,7 @@ Instructions will pop up in terminal as you go guiding you through the process o
 * [Amazon S3](https://aws.amazon.com/s3/?nc2=h_ql_prod_fs_s3) - Scalable storage in the cloud
 * [Amazon Transcribe](https://aws.amazon.com/transcribe/?nc2=h_ql_prod_ml_ts) - Automatic speech recognition
 * [Amazon Lambda](https://aws.amazon.com/lambda/?nc2=h_ql_prod_cp_lbd) - Run code based on triggers
+
+## Acknowledgements
+* [Tech With Tim](https://techwithtim.net/)
+* [Tech Tunes](https://www.thetechnologyupdates.com/)
